@@ -27,6 +27,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        arch:
+          - x86_64
         sdk:
           - openwrt-22.03
 
@@ -71,4 +73,3 @@ jobs:
            
             tag_name: ${{ env.TAG }}
             files: EasyTier-${{ matrix.arch }}-${{ matrix.sdk }}.zip
- 
